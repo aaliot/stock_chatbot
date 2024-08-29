@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quanta</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="chat-message bot-message">Bot: Hello! I'm Quanta, your helpful stock chatbot. Ask me about stock prices or information.</div>
+            {% if question %}
+                <div class="chat-message user-message">You: {{ question }}</div>
+                <div class="chat-message bot-message">Bot: {{ answer }}</div>
+            {% endif %}
+        </div>
+        <form action="/get_stock_info" method="post" class="chat-form">
+            <input type="text" id="user_question" name="user_question" placeholder="Type your question here..." required>
+            <input type="submit" value="Send">
+        </form>
+        <div>{{ graph_html | safe }}</div>
+    </div>
+</body>
+</html>
+
