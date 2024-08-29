@@ -17,7 +17,7 @@ Quanta is a stock market chatbot that utilizes the Yahoo Finance API to provide 
 
 ## How to Use:
 1. Clone the repository.
-2. Install the required dependencies listed in `requirements.txt`.
+2. Install the required files
 3. Run the Flask application locally.
 4. Interact with Quanta by asking it various stock-related questions.
 
